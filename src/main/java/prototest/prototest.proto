@@ -1,0 +1,19 @@
+syntax = "proto2";
+
+// c:\work\tapcore\protoc-3.5.0-win32\bin\protoc.exe -I=C:/work/tapcore/test_project/project/src/main/java/prototest/ --java_out=C:/work/tapcore/test_project/project/src/main/java C:/work/tapcore/test_project/project/src/main/java/prototest/prototest.proto
+
+package prototest;
+
+message ProtoRequest {
+    required string id = 1;
+    required string body = 2;
+    required string auth_header = 3;
+}
+enum ResponseStatus {
+  SUCCESS = 1;
+  ERROR = 2;
+}
+message ProtoResponse {
+    required string id = 1;
+    required ResponseStatus responseStatus = 2;
+}
